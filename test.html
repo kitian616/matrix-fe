@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset='utf-8'>
+    <title>test</title>
+    <style type="text/css">
+        body {
+            padding: 0px;
+            margin: 0;
+            background-color: black;
+        }
+        #main {
+            padding: 8px;
+        }
+        #main:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .text {
+            color: #00d600;
+            font-size: 4em;
+            font-weight: bold;
+            writing-mode: vertical-lr;
+            text-shadow: 0 0 .5em #00d600;
+            text-transform: uppercase;
+            opacity: 1;
+
+            float: left;
+        }
+        .text.on {
+            opacity: 1;
+            animation: cell-on .5s ease;
+        }
+        .text.off {
+            transition: all .5s ease;
+            visibility: hidden;
+            opacity: 0;
+        }
+        @keyframes cell-on 
+        {
+            0% {
+                color: #fff;
+                text-shadow: 0 0 .5em #fff;
+            }
+            100% {
+                color: #00d600;
+                text-shadow: 0 0 .5em #00d600;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+        <div class="text"></div>
+    </div>
+    <script src="./dist/build.js"></script>
+</body>
+</html>
