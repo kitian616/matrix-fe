@@ -72,11 +72,14 @@ class TheMatrix {
     }
     start() {
         function timeoutCallback(isGrow, x, y, l) {
-            var lastingTime = (l + 1) * this.itervalTime;
+            var lastingTime = l * this.itervalTime * 2;
             var waitingTime = 0;
             var maxFGTime= this.cell2D.height / 4 * this.itervalTime;
             var maxGFTime= this.maxWaitingTime;
             if (isGrow === true) {
+                y = utils.getRandomInt(0, this.cell2D.height * 3 / 4);
+                var lastL = this.cell2D.height - y;
+                var l = utils.getRandomInt(Math.floor(lastL / 3), lastL);
                 this.lineGrow.call(this, x, y, l);
                 waitingTime = utils.getRandomInt(0, maxGFTime);
             } else {
@@ -90,9 +93,8 @@ class TheMatrix {
             var y = utils.getRandomInt(0, this.cell2D.height * 3 / 4);
             var lastL = this.cell2D.height - y;
             var l = utils.getRandomInt(Math.floor(lastL / 3), lastL);
-            var time0 = utils.getRandomInt(0, this.maxWaitingTime);
-            this.lineGrow(x, y, l);
-            setTimeout(timeoutCallback.bind(this, false, x, y, l), time0);
+            setTimeout(timeoutCallback.bind(this, true, x, y, l),
+                utils.getRandomInt(0, this.maxWaitingTime));
         }
     }
 }
